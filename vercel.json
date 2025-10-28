@@ -25,10 +25,10 @@
     }
   ],
   "env": {
-    "MONGO_URI": "@mongo_uri",
-    "JWT_SECRET": "@jwt_secret",
-    "JWT_REFRESH_SECRET": "@jwt_refresh_secret",
-    "CLOUDINARY_URL": "@cloudinary_url",
+    "MONGO_URI":"mongodb+srv://Mayank:pVUG5tEZUIzxz6s3@cluster0.42vz7e5.mongodb.net/?appName=Cluster0",
+    "JWT_SECRET":"5rgaa1Y4737ZlE5KR0yJRieC7j64+pD4pzLm2DRuXq51gq8XqtbSo3ZS1CFn+u8t",
+    "JWT_REFRESH_SECRET":"your-refresh-secret",
+    "CLOUDINARY_URL":"cloudinary://962953125629678:_CkdUjgb3wBw66LkkJSWE_nDHMkt@dos2dkyir",
     "FRONTEND_URL": "@frontend_url"
   }
 }
