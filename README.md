@@ -215,13 +215,45 @@ cd frontend && npm test
 
 ## Deployment
 
-### Frontend (Vercel)
+### Deploy Everything on Vercel
+
+KaamSetu can be deployed entirely on Vercel as a mono-repo:
+
+1. **Push to GitHub**:
+```bash
+git add .
+git commit -m "Prepare for Vercel"
+git push origin main
+```
+
+2. **Import on Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Add New Project"
+   - Import your GitHub repository
+   - Vercel will auto-detect the configuration
+
+3. **Add Environment Variables** in Vercel Dashboard → Settings → Environment Variables:
+   - `MONGO_URI` - Your MongoDB Atlas connection string
+   - `JWT_SECRET` - Your JWT secret key
+   - `JWT_REFRESH_SECRET` - Your refresh token secret
+   - `CLOUDINARY_URL` - Cloudinary credentials (optional)
+   - `FRONTEND_URL` - Your Vercel deployment URL
+
+4. **Deploy**: Click "Deploy" and wait for build to complete
+
+For detailed instructions, see [DEPLOY_VERCEL.md](DEPLOY_VERCEL.md)
+
+### Alternative: Separate Deployments
+
+If you prefer separate deployments:
+
+**Frontend (Vercel)**:
 ```bash
 cd frontend
 vercel deploy
 ```
 
-### Backend (Render/Railway)
+**Backend (Render/Railway)**:
 1. Connect your GitHub repository
 2. Set environment variables
 3. Deploy
